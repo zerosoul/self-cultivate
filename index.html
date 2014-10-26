@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="yanggc" />
+		<link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+		<title>前端自我修养</title>
+		<link href="css/impress.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery.mini.js"></script>
+		<script type="text/javascript">
+			var loadScriptAsync = function(url, callback) {
+				var urls = url;
+				if (Object.prototype.toString.call(urls) != "[object Array]") {
+					urls = new Array(url);
+				}
+				for ( i = 0; i < urls.length; i++) {
+					var stag = document.createElement("script");
+					stag.type = "text/javascript";
+					stag.src = urls[i];
+					//callback the last
+					if (i == (urls.length - 1)) {
+						if (stag.readyState) {
+							stag.onreadystatechange = function() {
+								if (stag.readyState == "loaded" || stag.readyState == "complete") {
+									stag.onreadystatechange = null;
+									callback();
+								}
+							}
+						} else {
+							stag.onload = callback;
+						}
+					}
+					document.body.appendChild(stag);
+				}
+			};
+		</script>
+	</head>
+
+	<body class="impress-not-supported">
+		<!--<div class="loading" width="100%"></div>-->
+		<!--fallback message is only visible when there is `impress-not-supported` class on body.-->
+		<div class="fallback-message" style="display: none">
+			<p>
+				Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.
+			</p>
+			<p>
+				For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.
+			</p>
+		</div>
+		<div id="top_header">
+			<div class="resume_name">
+				<a href="#/landing_page">
+					飞华分享
+				</a>
+			</div>
+			<div class="top_menu">
+				<ul>
+					<li id="menu_intro">
+						<a href="#/intro">
+							Intro
+						</a>
+					</li>
+					<li id="menu_what">
+						<a href="#/what">
+							What
+						</a>
+					</li>
+					<li id="menu_how">
+						<a href="#/how">
+							How
+						</a>
+					</li>
+					<li id="menu_when">
+						<a href="#/when">
+							When
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="impress">
+			<div id="landing_page" class="step present active" data-x="0" data-y="0" data-area="landing_page">
+				<span class="title1">
+					<img src="img/qianduanxiuyang.jpg">
+				</span>
+				<p>
+					前端的自我修养
+				</p>
+			</div>
+			<div id="intro" class="step" data-x="1500" data-y="-1500" data-area="intro">
+				<div class="panel">
+					<img src="img/designer_and_coder.jpg"/>
+				</div>
+			</div>
+			<div class="step" data-x="3000" data-y="-1500" data-area="intro">
+				<div class="panel">
+					<!--<p>
+						灵长类，程序猿的一个分支
+					</p>-->
+					<dl>
+						<dt>外形：</dt>
+						<dd>1)格子衫/纯色上衣</dd>
+						<dd>2)牛仔裤</dd>
+						<dd>3)背包[黑色]</dd>
+						<dd>4)球鞋[黑、灰、白]</dd>
+						<dd>...</dd>
+					</dl>
+						<!--也可能是 <em>乔布斯</em> ...-->
+					<div class="tipimg" >
+						<img src="img/chengxuyuan.jpg" />
+					</div>
+				</div>
+			</div>
+			<div class="step" data-x="4500" data-y="-1500" data-area="intro">
+				<div class="panel" style="margin-top: 130px;">
+					<dl>
+						<dt>技能：</dt>
+						<dd>1)HTML</dd>
+						<dd>2)CSS</dd>
+						<dd>3)Javascript</dd>
+						<dd>4)开发工具/调试技巧/业内标准/交互/设计...</dd>
+						<dd>...</dd>
+					</dl>
+					<div class="tipimg">
+						<img src="img/codeforfood.jpg" />
+					</div>
+				</div>
+			</div>
+			<div class="step" data-x="4000" data-y="0" data-scale="4" data-area="intro">
+				<div class="panel">
+					<dl>
+						<dt>口头禅：</dt>
+						<dd>强刷一下</dd>
+						<dd>换个浏览器试试</dd>
+						<dd>我这儿是好的</dd>
+						<dd>...</dd>
+					</dl>
+					<div class="tipimg">
+						<img src="img/hashiqi.jpg" />
+					</div>
+				</div>
+			</div>
+			<div class="step" data-x="3000" data-y="2000" data-rotate-x="90" data-scale="5" data-area="intro">
+				<div class="panel">
+					<div class="panel">
+					<dl>
+						<dt>天敌：</dt>
+						<dd>IE6/7/8</dd>
+					</dl>
+					<img src="img/ie6.jpg" />
+				</div>
+				</div>
+			</div>
+			<div id="what" class="step" data-x="1500" data-y="1500" data-type="what" data-area="what">
+				<div class="panel">
+					<div class="titleimg">
+						<img src="img/tip.gif" />
+					</div>
+					<div class="title">
+						<p>
+							定义
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="step" data-x="8500" data-y="4500" data-rotate-y="90" data-area="what">
+				<div class="panel">
+					<div class="about_me_more">
+						<p>
+							<span>与交互/视觉设计师协作，根据设计图完成页面制作。</span>
+						</p>
+						<p>
+							<span>维护及优化网站前端性能。</span>
+						</p>
+						<p style="color: #f47920;">
+							<span>使用JavaScript编写封装良好的前端交互组件。</span>
+						</p>
+						<p style="color: #f47920;">
+							<span>对Web项目的前端实现方案提供专业指导及监督。</span>
+						</p>
+						<p style="color: #f47920;"><span>对新人及相关开发人员进行前端技能培训</span></p>
+						<p style="color: #f47920;"><span>设计并实施全网前端优化。</span></p>
+					</div>
+				</div>
+
+			</div>
+			<div id="how" class="step" data-x="-1500" data-y="1500" data-area="how">
+				<div class="panel">
+					<div class="titleimg">
+						<img src="img/tip.gif" />
+					</div>
+					<div class="title" style="margin-right:250px; ">
+						<p>
+							成长
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="step" data-x="-3000" data-y="-3000" data-area="how">
+				<div class="panel">
+					<div class="recently_nodejs">
+						<p>
+							如何成长为一名<em>靠谱儿</em> 的前端工程师？
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="step" data-x="-3000" data-y="-3000" data-z="3000" data-area="how">
+				<div class="panel">
+					<div class="recently_nodejs" style="background-image: url(img/htmls.jpg);background-repeat: no-repeat;background-position: right bottom;">
+						<p>
+							<em>阶段一：</em>
+						</p>
+						<p>能用html+css把页面做出来，能用JS实现动态效果。</p>
+					</div>
+				</div>
+
+			</div>
+			<div class="step" data-x="-4400" data-y="-300" data-z="1000" data-rotate-x="0" data-area="how">
+				<div class="panel">
+					<div class="job_list">
+						<p>
+							<em>阶段二：</em>在1的基础上保证浏览器兼容性。
+						</p>
+						<div class="job_logo">
+							<img src="img/ies.jpg" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="step" data-x="-4400" data-z="2000" data-rotate-x="90" data-area="how">
+				<div class="panel">
+					<div class="job_list">
+						<p>
+							<em>阶段三：</em>在2的基础上开始出现代码洁癖，代码逐渐趋向简洁高效
+						</p>
+						<div class="job_logo">
+							<img src="img/codefun.jpg" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="step" data-x="-4400" data-z="3000" data-rotate-x="180" data-area="how">
+				<div class="panel">
+					<div class="job_list">
+						<p>
+							<em>阶段四：</em>在3的基础上开始关注语义性、可用性和可重用性
+						</p>
+						<div class="job_logo">
+							<img src="img/shtml5.gif" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="step" data-x="-4400" data-z="4000" data-rotate-x="270" data-area="how">
+				<div class="panel">
+					<div class="job_list">
+						<p>
+							<em>阶段五：</em>在4的基础上开始关注页面性能
+						</p>
+						<div class="job_logo">
+							<img src="img/per.png" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="step" data-x="-4400" data-z="5000" data-rotate-x="360" data-area="how">
+				<div class="panel">
+					<div class="job_list">
+						<p>
+							<em>阶段六：</em>在5的基础上开始费劲脑汁寻思怎么能把开发效率也提升上来
+						</p>
+						<div class="job_logo">
+							<img src="img/effect.gif" />
+						</div>
+					</div>
+				</div>
+			</div>
+				<div class="step" data-x="-4400" data-z="6000" data-rotate-x="450" data-area="how">
+				<div class="panel">
+					<div class="job_list">
+						<p>
+							<em>阶段七：</em>HTML5来了，前端MVC也有了，进入了大前端时代，开始新一轮学习，妥妥的...
+						</p>
+						<div class="job_logo">
+							<img src="img/html5.gif" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="when" class="step" data-x="-1500" data-y="-1500" data-area="when">
+					<div class="panel">
+					<div class="titleimg">
+						<img src="img/tip.gif" />
+					</div>
+					<div class="title">
+						<p>
+							优秀/卓越
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="step" data-x="-1500" data-y="1500" data-area="when">
+				<div>
+					<img src="img/jinengadvanced.jpg" width="870px"/>
+				</div>
+			</div>
+			<div class="step" data-x="-1500" data-y="3000" data-z="-4000" data-rotate-x="30" data-rotate-y="50" data-area="when">
+				<div class="panel">
+					<img src="img/scienceAndEngineering.PNG"/>
+				</div>
+			</div>
+		</div>
+		<div class="hint">
+			<p>
+				比程序员更懂设计，比设计师更懂编程
+			</p>
+		</div>
+		<script>
+			var jsSrc = ["js/impress.js"];
+			loadScriptAsync(jsSrc, initialAfterImpress);
+			function initialAfterImpress() {
+				var api = impress();
+				api.init();
+				document.addEventListener("impress:stepenter", function(event) {
+					var data_type = $(".active").attr("data-type");
+					if (data_type == 'past_item') {
+						$(".active .small").show();
+						$(".active .large").hide();
+					} else if (data_type == 'past_items') {
+						$(".small").hide();
+						$(".large").show();
+					}
+				}, false);
+				document.addEventListener("impress:stepenter", function(event) {
+					var data_area = $(".active").attr("data-area");
+					if (data_area == "landing_page") {
+						$("li").removeClass("menu_highlight");
+						$("#top_header .resume_name").css("background", "#D00505");
+					} else {
+						$("#top_header .resume_name").css("background", "none repeat scroll 0 0 #000000")
+						if (data_area == 'intro') {
+							$("li").removeClass("menu_highlight");
+							$("#menu_intro").addClass("menu_highlight");
+						} else if (data_area == 'what') {
+							$("li").removeClass("menu_highlight");
+							$("#menu_what").addClass("menu_highlight");
+						} else if (data_area == 'how') {
+							$("li").removeClass("menu_highlight");
+							$("#menu_how").addClass("menu_highlight");
+						} else if (data_area == 'when') {
+							$("li").removeClass("menu_highlight");
+							$("#menu_when").addClass("menu_highlight");
+						}
+					}
+				}, false);
+			}
+		</script>
+
+	</body>
+
+</html>
